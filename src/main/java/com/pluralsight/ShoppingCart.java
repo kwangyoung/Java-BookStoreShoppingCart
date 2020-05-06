@@ -36,6 +36,13 @@ public class ShoppingCart {
  public void setCartItems(ArrayList<CartItem> cartItems) {
   this.cartItems = cartItems;
  }
+ public void deleteCartItem(int index) {
+  try {
+   cartItems.remove( index );
+  } catch (IndexOutOfBoundsException e) {
+   e.printStackTrace();
+  }
+ }
  public double getOrderTotal() {
   return dblOrderTotal;
  }
